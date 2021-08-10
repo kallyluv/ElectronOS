@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		system-ui, sans-serif;
+}
+html {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body {
+	padding: 18px;
+	width: 100%;
+	height: 100%;
+	color: #ffffff;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		system-ui, sans-serif;
+	background: url("https://images8.alphacoders.com/393/393788.jpg") no-repeat center;
+    background-size: cover;
+}
+.app-window {
+	position: absolute;
+	width: 300px;
+	color: #000000;
+	background: rgba(var(--header-color), 1);
+	-webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+	border: 1px solid rgba(var(--text-color), 0.3);
+	border-radius: 8px;
+	box-shadow: 0 8px 20px #00000060;
+	overflow: hidden;
+	z-index: 1;
+	resize: both;
+	min-width: 300px;
+	min-height: 80px;
+	transition: 0.15s ease transform;
+}
+.app-window:not([active]) {
+	box-shadow: 0 8px 10px #00000020;
+}
+.app-window .overlay {
+	pointer-events: none;
+	position: absolute;
+	left: 0;
+	top: 35px;
+	width: 100%;
+	height: calc(100% - 35px);
+	background: none;
+	border-radius: 0 0 8px 8px;
+	z-index: 10;
+	background: none;
+}
+.app-window:not([active]) .overlay {
+	background-color: #00000062;
+}
+.app-window > .header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(var(--header-color), 0.75);
+	color: rgba(var(--text-color), 0.925);
+	background-clip: padding-box;
+	border-bottom: inherit;
+	cursor: default;
+	-webkit-user-select: none;
+	user-select: none;
+	touch-action: none;
+}
+.app-window:not([active]) > .header {
+	color: rgba(var(--text-color), 0.75);
+	background: rgba(var(--header-color), 0.9);
+}
+.app-window > .header .window-controls {
+	margin: 11px;
+	margin-right: auto;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	color: #202020bf;
+	background: none;
+}
+.app-window > .header .window-controls:not(:where(:hover, :active)) {
+	color: transparent;
+	background: none;
+}
+.app-window > .header .window-controls .control {
+	position: relative;
+	width: 12px;
+	height: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: inherit;
+	font-size: 8px;
+	font-family: inherit;
+	background: var(--control-background);
+	border: none;
+	border-radius: 50%;
+}
+.app-window > .header .window-controls .control::before {
+	content: attr(data-icon);
+	mix-blend-mode: luminosity;
+	background: none;
+}
+.app-window > .header .window-controls .control::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border: 1px solid #50505070;
+	border-radius: inherit;
+	mix-blend-mode: luminosity;
+	background: none;
+}
+.app-window:not([active])
+	> .header
+	.window-controls:not(:where(:hover, :active))
+	.control {
+	background: #00000018;
+}
+.app-window > .header .window-controls .control[data-control="close"] {
+	--control-background: #fc605c;
+}
+.app-window > .header .window-controls .control[data-control="minimize"] {
+	--control-background: #fcbb40;
+}
+.app-window > .header .window-controls .control[data-control="maximize"] {
+	--control-background: #34c749;
+}
+.app-window > .header .title {
+	position: absolute;
+	background: none;
+}
+.app-window > .main {
+	padding: 8px 16px;
+}
+
+.app-icon {
+	--size: max(min(7vw, 7vh), 50px);
+	width: var(--size);
+	height: var(--size);
+	box-shadow: 0 0 5px black;
+	border-radius: 7px;
+	cursor: pointer;
+	transition: 0.5s ease all;
+	margin: 10px;
+	text-align: center;
+	line-height: calc(var(--size) * 2 + (var(--size) * 0.35));
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		system-ui, sans-serif;
+}
+.app-icon #name {
+	color: white;
+	mix-blend-mode: difference;
+	background: none;
+}
+.app-icon:hover {
+	transform: scale(1.05);
+}

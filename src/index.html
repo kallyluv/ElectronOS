@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>ElectronOS</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="styles/main.css" />
+		<link rel="stylesheet" href="styles/apps.css" />
+		<link rel="stylesheet" href="styles/settings.css" />
+	</head>
+	<body>
+		<header>
+			<span id="time" style="float: right; background: none">{{time}}</span>
+		</header>
+		<main>
+			<div class="app-icon" app="pathfinding">
+				<span id="name">Pathfinder</span>
+			</div>
+			<div
+				class="app-icon"
+				app="ste"
+				style="
+					background-image: url('https://stedit.app/resources/icon.svg');
+					background-position: center;
+					background-size: 80%;
+					background-repeat: no-repeat;
+				"
+			>
+				<span id="name">STE</span>
+			</div>
+			<div class="app-icon" app="settings">
+				<span id="name">Settings</span>
+			</div>
+		</main>
+	</body>
+	<script>
+		setInterval(() => {
+			time.textContent = new Date().toLocaleTimeString();
+		}, 1000);
+	</script>
+</html>

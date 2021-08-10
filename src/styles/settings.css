@@ -1,0 +1,29 @@
+.setting {
+    user-select: none;
+}
+.setting > form input[type="radio"] {
+    margin: 5px;
+    margin-right: 10px;
+    position: relative;
+    top: -2px;
+    cursor: pointer;
+}
+.setting > form label {
+    font-size: large;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.setting > span {
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.setting > form {
+    padding: 10px;
+    padding-left: 20px;
+}
+.setting > hr {
+    width: calc(100% - 10px);
+    position: relative;
+    left: 5px;
+}

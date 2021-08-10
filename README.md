@@ -1,3 +1,3 @@
 <h1>ElectronOS App Store</h1>
-<img src="https://github.com/ntkme/github-buttons/workflows/build/badge.svg" />
+<a href="https://github.com/xJustJqy/ElectronOS/tree/app-store"><img src="https://github.com/ntkme/github-buttons/workflows/build/badge.svg" /></a>
 <hr>

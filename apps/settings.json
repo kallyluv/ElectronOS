@@ -1,4 +1,0 @@
-{
-    "title": "Settings",
-    "content": "<section class='setting'><span>Color Scheme</span><hr /><form><input type='radio' id='dark' name='theme' /><label for='dark'>Dark</label><input type='radio' id='light' name='theme' /><label for='light'>Light</label></form></section>"
-}

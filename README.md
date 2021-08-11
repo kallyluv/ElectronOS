@@ -1,4 +1,4 @@
-<h1>ElectronOS App Store<br /><a href="https://github.com/xJustJqy/ElectronOS/tree/app-store"><img src="https://github.com/ntkme/github-buttons/workflows/build/badge.svg" /></a><h4>Branch for ElectronOS App Store</h4></h1>
+<h1>ElectronOS App Store<br /><a href="https://github.com/xJustJqy/ElectronOS/tree/app-store"><img src="https://github.com/ntkme/github-buttons/workflows/build/badge.svg" /></a><h4>Info on the EOS App Store</h4></h1>
 <h2>How to submit an app</h2>
 
 - Make an [app.json](https://github.com/xJustJqy/electronos-app/blob/main/app.json.md) file & add it to the app directory

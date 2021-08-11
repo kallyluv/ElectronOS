@@ -13,4 +13,4 @@ Branch for ElectronOS App Store<hr><h2>How to submit an app</h2>
 - Click `Upload File`
 - Upload the directory ZIP
 - Click Submit
-- Done! Your app will be sent to EOS for processing and will be uploaded to the App Store if approved!
+[x] Done! Your app will be sent to EOS for processing and will be uploaded to the App Store if approved!
